@@ -1,7 +1,5 @@
-/*@import "bootstrap";
-@import "bootstrap-sprockets";
 
-*/
+$lightGray: #999;
 
 /* universal */
 
@@ -23,10 +21,9 @@ textarea {
 
 .center {
 	text-align: center;
-}
-
-.center h1 {
-	margin-bottom: 10px;
+	h1 {
+		margin-bottom: 10px;
+	}
 }
 
 /*typography */
@@ -47,10 +44,65 @@ h2{
 	letter-spacing: -1px;
 	margin-bottom: 30px;
 	text-align: normal;
-	color: #999;
+	color: $lightGray;
 }
 
 p {
 	font-size: 1.1em;
 	line-height: 1.7em;
+}
+
+/* logo */
+
+#logo {
+	float: left;
+	margin-right: 10px;
+	font-size: 1.7em;
+	color: #000;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-weight: bold;
+	line-height: 1;
+}
+
+#logo:hover {
+	color: #000;
+	background-color:rgba(255,0,0,0.0);
+	text-decoration: none;
+}
+
+/* footer */
+/* seems to be a problem loading built in bootstrap variables*/
+footer {
+	margin-top: 45px;
+	padding-top: 5px;
+	border-top: 1px solid #eaeaea;
+	color: $lightGray;
+	a {
+		color: gray;
+		&:hover{
+			color: #000;
+			background-color:rgba(255,0,0,0.0);
+			text-decoration: none;
+		}
+	}
+	small {
+		float: left;
+	}
+	ul {
+		float: right;
+		list-style: none;
+		li {
+			float: left;
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+	}
+	p{
+		margin-left: 10px;
+	}
+}
+
+small {
+	float: left;
 }

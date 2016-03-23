@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   get 'static_pages/contact', to: 'static_pages#contact'
 
+  get 'static_pages/test', to: 'static_pages#test'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
