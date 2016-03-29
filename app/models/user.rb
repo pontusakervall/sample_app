@@ -3,8 +3,8 @@ class User < ActiveRecord::Base
 
 	before_save { |user| user.email = user.email.upcase }
 	
-	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[\w+\.-]+\.[a-z]{2,}\z/i
-	
+	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\.-]+\.[a-z]{2,}\z/i
+
 	validates :name, presence: true, length: { maximum: 50}
 	validates :email, uniqueness: { case_sensitive: false }, presence: true
 	validates_format_of :email, :with => VALID_EMAIL_REGEX
