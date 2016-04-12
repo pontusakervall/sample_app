@@ -26,13 +26,14 @@
 #   database: db/production.sqlite3
 # 
 
+
 development:
   adapter: postgresql
   encoding: utf8
   database: postgres
   pool: 5
   username: postgres
-  password: 
+  password: poiu
 
 test:
   adapter: postgresql
@@ -40,7 +41,7 @@ test:
   database: postgres_test
   pool: 5
   username: postgres
-  password: 
+  password: poiu
 
 production:
   adapter: postgresql
@@ -48,4 +49,4 @@ production:
   database: postgres_production
   pool: 5
   username: postgres
-  password: 
+  password: poiu
