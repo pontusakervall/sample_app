@@ -1,1 +1,3 @@
-# sample_app
+# Your favourite micropost network in Ruby on Rails
+
+Cool beans

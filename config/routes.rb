@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   
   resources :users
 
-  root :to => 'static_pages#home'
+  resources :sessions, only: [:create, :new, :destroy] 
+
+  root to: 'static_pages#home'
 
   get '/help', to: 'static_pages#help'
 
@@ -13,6 +15,10 @@ Rails.application.routes.draw do
   get '/test', to: 'static_pages#test'
 
   get '/signup', to: 'users#new'
+
+  get '/signin', to: 'sessions#new'
+
+  get '/signout', to: 'sessions#destroy' #, via: :delete
 
 =begin
   get 'static_pages/help', to: 'static_pages#help'
